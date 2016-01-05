@@ -1,0 +1,86 @@
+<div class="container header">
+	<h1>Task Overview</h1>
+	<%= form_for @task do |f| %> 
+	<%= f.text_field :name, :placeholder => 'Task name' %>
+
+	<%= f.check_box :important, :checked_value => '1', :unchecked_value => '0', :class => 'important_checkbox' %>
+	<%= f.label :important, 'Important', :class => 'btn-sm btn-secondary' %>
+
+	<%= f.check_box :urgent, :checked_value => '1', :unchecked_value => '0', :class => 'urgent_checkbox' %>
+	<%= f.label :urgent, 'Urgent', :class => 'btn-sm btn-secondary' %>
+
+	<%= f.hidden_field :done, :value => '0' %>
+	<%= f.hidden_field :owner, :value => 'Mentor' %>
+	<%= f.submit 'Create task', :class => 'btn-sm btn-primary', :id => 'createtask' %>
+	<% end %>
+</div>
+
+<hr>
+
+<div class="container" id="active_tasks">
+	<div class="row">
+		<div class="col-md-6 tasks important urgent">
+			<p>Important & Urgent</p>
+			<ul>
+				<% @important_urgent.each do |task| %>
+				<li class="task" id="<%= task.id %>">
+					<%= task.name %>
+					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="col-md-6 tasks important noturgent">
+			<p>Important & <strike>Urgent</strike></p>
+			<ul>
+				<% @important_not_urgent.each do |task| %>
+				<li class="task" id="<%= task.id %>">
+					<%= task.name %>
+					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 tasks notimportant urgent">
+			<p><strike>Important</strike> & Urgent</p>
+			<ul>
+				<% @not_important_urgent.each do |task| %>
+				<li class="task" id="<%= task.id %>">
+					<%= task.name %>
+					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="col-md-6 tasks notimportant noturgent">
+			<p><strike>Important & Urgent</strike></p>
+			<ul>
+				<% @not_important_not_urgent.each do |task| %>
+				<li class="task" id="<%= task.id %>">
+					<%= task.name %>
+					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+<div class="row archive">
+		<div class="col-md-12 tasks" id="done_tasks">
+		<br>
+			<p>Done tasks</p>
+			<ul>
+				<% @tasks_archive.each do |task| %>
+				<li class="task" id="<%= task.id %>">
+					<%= task.name %>
+					<a class="done btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">delete</a>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

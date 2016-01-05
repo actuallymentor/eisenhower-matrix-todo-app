@@ -1,0 +1,64 @@
+// Import bootstrap before custom definitions
+
+@import "bootstrap";
+
+// General definitions
+
+.pull-right {
+	float: right!important;
+}
+body {
+	background-color: #ECEFF1;
+}
+.btn-primary {
+	background-color: #2196F3;
+}
+.btn, .btn-sm {
+	border: none;
+	border-radius: 0;
+}
+
+// Header
+
+.header {
+	h1 {
+		margin: 10px 0 20px 0;
+	}
+	.btn-sm {
+		margin: 5px 10px;
+	}
+	input[type=checkbox] {
+		display: none;
+	}
+	label {
+		background-color: #B0BEC5;
+	}
+	input[type=checkbox]:checked + label {
+		background-color: #4CAF50;
+		color: white;
+	}
+
+}
+
+// Task section
+
+.tasks{
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 50px 0;
+		box-shadow: 0 5px 10px #CFD8DC;
+
+		li {
+			background-color: white;
+			padding: 10px 20px;
+			border: solid 1px #CFD8DC;
+			border-bottom: none;
+
+			a.btn {
+				padding: 2px 5px;
+			}
+
+		}
+	}
+}
