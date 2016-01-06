@@ -5,6 +5,8 @@ gem 'jquery-form-rails', '~> 1.0', '>= 1.0.1'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
+gem 'devise'
+
 # END CUSTOM #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
