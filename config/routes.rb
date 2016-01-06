@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
  
+  # Devise auth config
   devise_for :users
-  get 'interface/index'
-
- # Map a front page
-  get '/' => 'pages#index'
 
   # API mapping
   get '/api/' => 'api#read'
