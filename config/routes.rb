@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
   # Devise auth config
-  devise_for :users
+  devise_for :users, controllers: { sessions: "users/sessions" }
 
   # API mapping
   get '/api/' => 'api#read'
