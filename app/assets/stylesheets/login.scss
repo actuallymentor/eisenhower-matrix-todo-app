@@ -1,0 +1,80 @@
+// Vertical align mixin
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Body sizing
+html, body {
+	height: 100%;
+
+	.loginpage {
+		height: 100%;
+	}
+}
+
+// Form positioning
+#loginform {
+
+	// Align form vertically
+	@include vertical-align();
+
+	// Login wrapper
+	#login_wrap {
+		background-color: white;
+		padding: 0;
+		box-shadow: 0 5px 10px #CFD8DC;
+
+	  	// Login form title
+	  	h2 {
+	  		background-color: $primary-color;
+	  		color: white;
+	  		padding: 15px;
+	  	}
+
+	  	// Formatting of the form
+	  	#form_contents {
+	  		padding: 15px;
+
+	  		// User input fields
+	  		input[type="email"], input[type="password"] {
+	  			padding: 5px;
+	  			margin: 10px 0;
+	  			width: 100%;
+	  			background-image: none!important;
+	  		}
+
+	  		// Submit button
+	  		input[type="submit"] {
+	  			background-color: $accent-color;
+	  			color: white;
+	  			border: none;
+	  			padding: 5px 20px;
+	  			margin: 20px 0;
+	  		}
+
+	  		// Remember me
+	  		.rememberme {
+	  			color: grey;
+	  		}
+	  		.rememberme label {
+	  			margin-left: 5px;
+	  		}
+
+	  		// Forgot password and signup
+	  		#password_signup a {
+	  			color: $primary-light;
+	  		}
+
+	  	}
+
+	  	// Password field on signup page
+	  	.password_field em {
+	  		opacity: 0.6;
+	  	}
+
+  }
+}

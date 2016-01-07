@@ -1,6 +1,6 @@
 $ ->
 	# Catch the clicking of 'done'
-	$("body").on 'click', '#active_tasks .task a.active', (e) ->
+	$("body.app_index").on 'click', '#active_tasks .task a.active', (e) ->
 		e.preventDefault()
 		thisobj = $(this)
 		done_task = 'empty'
@@ -30,7 +30,7 @@ $ ->
 			$('#done_tasks ul').prepend('<li class="task done" id="' + id + '">' + task + '<a class="done btn btn-secondary pull-right btn-sm" href="/app/done/' + id + '">delete</a>' + "</li>")
 		
 
-	$('body').on 'submit', 'form', (e) ->
+	$('body.app_index').on 'submit', 'form', (e) ->
 		# stop regular form
 		e.preventDefault()
 		# do ajax call
