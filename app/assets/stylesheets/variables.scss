@@ -7,3 +7,22 @@ $accent-light: #FF80AB;
 $accent-dark: #F50057;
 
 $font-stack: 'Roboto', sans-serif;
+
+ // Vertical align mixin
+ @mixin vertical-align($position: relative) {
+ 	position: $position;
+ 	top: 50%;
+ 	-webkit-transform: translateY(-50%);
+ 	-ms-transform: translateY(-50%);
+ 	transform: translateY(-50%);
+ }
+
+ // Horizontal align mixin
+ @mixin dead-center($position: relative) {
+ 	position: $position;
+ 	top: 50%;
+ 	-webkit-transform: translate(-50%, -50%);
+ 	-ms-transform: translate(-50%, -50%);
+ 	transform: translate(-50%, -50%);
+ 	left: 50%;
+ }

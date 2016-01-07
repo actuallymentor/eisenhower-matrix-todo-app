@@ -1,22 +1,18 @@
 <body class="app_index">
-<div class="container header">
-	<h1>Task Overview</h1>
-	<%= form_for @task do |f| %> 
-	<%= f.text_field :name, :placeholder => 'Task name' %>
+	<div class="container header">
+		<h1>Task Overview</h1>
+		
+	</div>
 
-	<%= f.check_box :important, :checked_value => '1', :unchecked_value => '0', :class => 'important_checkbox' %>
-	<%= f.label :important, 'Important', :class => 'btn-sm btn-secondary' %>
+	<hr>
 
-	<%= f.check_box :urgent, :checked_value => '1', :unchecked_value => '0', :class => 'urgent_checkbox' %>
-	<%= f.label :urgent, 'Urgent', :class => 'btn-sm btn-secondary' %>
+<!-- 
 
-	<%= f.hidden_field :done, :value => '0' %>
-	<%= f.hidden_field :owner, :value => 'Mentor' %>
-	<%= f.submit 'Create task', :class => 'btn-sm btn-primary', :id => 'createtask' %>
-	<% end %>
-</div>
+#################################################
+This section displays undone tasks from the database 
+#################################################
 
-<hr>
+-->
 
 <div class="container" id="active_tasks">
 	<div class="row">
@@ -69,10 +65,18 @@
 	</div>
 </div>
 
+<!-- 
+
+#################################################
+This section displays done tasks from the database 
+#################################################
+
+-->
+
 <div class="container">
-<div class="row archive">
+	<div class="row archive">
 		<div class="col-md-12 tasks" id="done_tasks">
-		<br>
+			<br>
 			<p>Done tasks</p>
 			<ul>
 				<% @tasks_archive.each do |task| %>
@@ -86,7 +90,47 @@
 	</div>
 </div>
 
-<p>
-	<%= user_signed_in? %>
-</p>
+
+<!-- 
+
+#################################################
+This is the 'new task' button 
+#################################################
+
+-->
+
+<div class="container_circle">
+	<div class="circle base" data-toggle="modal" data-target="#task_modal">
+		<span class="glyphicon glyphicon-plus"></span>
+	</div>
+</div>
+
+<!-- 
+
+#################################################
+This is the 'new task' modal 
+#################################################
+
+-->
+
+<div class="modal fade" id="task_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="newtask modal-dialog" role="document">
+		<div class="modal-content">
+			<%= form_for @task do |f| %> 
+			<%= f.text_field :name, :placeholder => 'Task name' %>
+
+			<%= f.check_box :important, :checked_value => '1', :unchecked_value => '0', :class => 'important_checkbox' %>
+			<%= f.label :important, 'Important', :class => 'btn-sm btn-secondary' %>
+
+			<%= f.check_box :urgent, :checked_value => '1', :unchecked_value => '0', :class => 'urgent_checkbox' %>
+			<%= f.label :urgent, 'Urgent', :class => 'btn-sm btn-secondary' %>
+
+			<%= f.hidden_field :done, :value => '0' %>
+			<%= f.hidden_field :owner, :value => 'Mentor' %>
+			<%= f.submit 'Create task', :class => 'btn-sm btn-primary', :id => 'createtask' %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
 </body>

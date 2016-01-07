@@ -1,16 +1,30 @@
-<h2>Forgot your password?</h2>
+<div class="container loginpage">
+	<div id="sessionform" class="row">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+		<div id="session_wrap" class="col-md-4 col-md-offset-4">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+			<h2>Forgot your password?</h2>
+			<div id="form_contents">
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+				<%= devise_error_messages! %>
 
-<%= render "devise/shared/links" %>
+				<div class="field">
+					<%= f.email_field :email, autofocus: true, placeholder: 'email' %>
+				</div>
+
+				<div class="actions">
+					<%= f.submit "Send me reset password instructions" %>
+				</div>
+				<% end %>
+
+				<hr>
+
+				<div id="other_actions">
+					<%= render "devise/shared/links" %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

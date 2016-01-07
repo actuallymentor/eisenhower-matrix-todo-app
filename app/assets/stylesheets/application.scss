@@ -14,8 +14,29 @@
  */
 
  @import "variables.scss";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
  @import "*";
 
  body {
  	font-family: $font-stack;
+ }
+
+ // Menu styling
+
+ .navbar.navbar-default {
+ 	background-color: $primary-color;
+ 	margin: 0;
+ 	border: 0;
+ 	border-radius: 0;
+
+ 	ul li a, a {
+ 		color: white;
+ 	}
+
+ 	ul.nav .active a {
+ 		background-color: $primary-dark;
+ 		color: white;
+ 	}
+
  }

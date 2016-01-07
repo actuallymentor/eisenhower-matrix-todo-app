@@ -1,7 +1,7 @@
 <div class="container loginpage">
-  <div id="loginform" class="row">
+  <div id="sessionform" class="row">
 
-    <div id="login_wrap" class="col-md-4 col-md-offset-4">
+    <div id="session_wrap" class="col-md-4 col-md-offset-4">
       <h2>Welcome back.</h2>
 
       <!-- <div class="alert alert-warning" role="alert"><%= flash[:notice] %></div> -->
@@ -24,14 +24,15 @@
 
         <% if devise_mapping.rememberable? -%>
         <div class="field rememberme">
-          <%= f.check_box :remember_me %>
+          <%= f.check_box :remember_me, {checked: true} %>
           <%= f.label :remember_me %>
         </div>
         <% end -%>
 
-        <hr>        
+        <hr>      
+
         <% end %>
-        <div id="password_signup">
+        <div id="other_actions">
           <%= render "devise/shared/links" %>
         </div>
       </div>

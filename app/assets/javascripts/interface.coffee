@@ -1,5 +1,7 @@
 $ ->
+	#############################
 	# Catch the clicking of 'done'
+	#############################
 	$("body.app_index").on 'click', '#active_tasks .task a.active', (e) ->
 		e.preventDefault()
 		thisobj = $(this)
@@ -24,11 +26,13 @@ $ ->
 		thisobj.parent().remove()
 		
 
-		# dd task to archive
-
+	# Task to archive
 	task_done = (id, task) ->
 			$('#done_tasks ul').prepend('<li class="task done" id="' + id + '">' + task + '<a class="done btn btn-secondary pull-right btn-sm" href="/app/done/' + id + '">delete</a>' + "</li>")
 		
+	#############################
+	# New task submit
+	#############################
 
 	$('body.app_index').on 'submit', 'form', (e) ->
 		# stop regular form
@@ -61,6 +65,7 @@ $ ->
 			#clear form
 			thisobj.closest('form').find("input[type=text]").val("")
 			thisobj.closest('form').find("input[type=checkbox]").attr('checked', false)
+			$('#task_modal').modal('hide')
 		# show new item
 		imp_urg = (e) ->
 			$('.important.urgent ul').append('<li class="task" id="' + e + '">' + task + '<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/' + e + '">done</a>' + "</li>")
@@ -70,3 +75,36 @@ $ ->
 			$('.notimportant.urgent ul').append('<li class="task" id="' + e + '">' + task + '<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/' + e + '">done</a>' + "</li>")
 		nimp_nurg = (e) ->
 			$('.notimportant.noturgent ul').append('<li class="task" id="' + e + '">' + task + '<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/' + e + '">done</a>' + "</li>")
+
+	#############################
+	# Keyboard shortcuts
+	#############################
+
+	$('body.app_index').on 'keypress', (e) ->
+		console.log(e.which)
+		if e.which is 116
+			$('#task_modal').modal('show')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

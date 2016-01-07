@@ -24,25 +24,11 @@ body {
 	h1 {
 		margin: 10px 0 20px 0;
 	}
-	.btn-sm {
-		margin: 5px 10px;
-	}
-	input[type=checkbox] {
-		display: none;
-	}
-	label {
-		background-color: #B0BEC5;
-	}
-	input[type=checkbox]:checked + label {
-		background-color: #4CAF50;
-		color: white;
-	}
-
 }
 
 // Task section
 
-.tasks{
+.tasks {
 	ul {
 		list-style: none;
 		padding: 0;
@@ -60,5 +46,59 @@ body {
 			}
 
 		}
+	}
+}
+
+// Add a new task
+
+.container_circle {
+	position: fixed;
+	right: 6em;
+	bottom: 6em;
+	z-index: 999999;
+
+	.circle {
+		width:60px;
+		height:60px;
+		position: absolute;
+
+		border-radius:50%;
+		-webkit-transition:all 0.2s linear;
+		-moz-transition:all 0.2s linear;
+		-ms-transition:all 0.2s linear;
+		transition:all 0.2s linear;
+		box-shadow: 1px 1px 3px #7D7D7D;
+		background-color: $accent-color;
+
+		.glyphicon {
+			@include dead-center();
+			color: white;
+		}
+	}
+	.circle:hover {
+		box-shadow: 1px 1px 30px black;
+	}
+
+	.circle.base {
+		z-index: 1;
+	}
+}
+
+// New task modal
+
+.newtask.modal-dialog .modal-content {
+	margin-top: 50%;
+	.btn-sm {
+		margin: 5px 10px;
+	}
+	input[type=checkbox] {
+		display: none;
+	}
+	label {
+		background-color: #B0BEC5;
+	}
+	input[type=checkbox]:checked + label {
+		background-color: #4CAF50;
+		color: white;
 	}
 }
