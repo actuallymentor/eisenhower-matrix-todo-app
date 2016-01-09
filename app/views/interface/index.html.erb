@@ -27,7 +27,7 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
-					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
+				<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Finished the essential stuff, well done.</li>
 			</ul>
 		</div>
 		<div class="col-md-6 tasks important noturgent">
@@ -42,7 +42,7 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
-					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
+				<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Planned in all important things, nice.</li>
 			</ul>
 		</div>
 	</div>
@@ -59,13 +59,13 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
-					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
+				<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Delegated tasks not worth your time, good.</li>
 			</ul>
 		</div>
 		<div class="col-md-6 tasks notimportant noturgent">
 			<p>
-			Delete these
-			<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Not important and not urgent. Ignore these tasks."></span>
+				Delete these
+				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Not important and not urgent. Ignore these tasks."></span>
 			</p>
 			<ul>
 				<% @not_important_not_urgent.each do |task| %>
@@ -74,8 +74,19 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
-					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
+				<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Dispensed of all tasks of no consecuence.</li>
 			</ul>
+		</div>
+	</div>
+	<div class="row instructions">
+		<div class="col-md-12">
+			<p id="keyboard_shortcuts">
+				<% if browser.mac? %>
+				Keyboard shortcuts: t (new task), ⌘ + i (mark important), ⌘ + u (mark urgent)
+				<% else %>
+				Keyboard shortcuts: t (new task), ctrl + i (mark important), ctrl + u (mark urgent)
+				<% end %>
+			</p>
 		</div>
 	</div>
 </div>
@@ -104,6 +115,7 @@ This section displays done tasks from the database
 								<li class="task" id="<%= task.id %>">
 									<%= task.name %>
 									<a class="done btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">delete</a>
+									<span class="btn btn-secondary pull-right btn-sm time_ago"> <%= distance_of_time_in_words(Time.now, task.updated_at) %> ago</span>
 								</li>
 								<% end %>
 							</ul>

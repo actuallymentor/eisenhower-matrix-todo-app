@@ -7,7 +7,7 @@
 		background-color: #ECEFF1;
 	}
 	.btn-primary {
-		background-color: #2196F3;
+		background-color: $primary-color;
 	}
 	.btn, .btn-sm {
 		border: none;
@@ -49,6 +49,11 @@
 				border: solid 1px #CFD8DC;
 				border-bottom: none;
 
+				.time_ago {
+					opacity: 0.8;
+					padding: 2px 10px;
+				}
+
 				&.all_done {
 					background: none;
 					border: none;
@@ -68,6 +73,7 @@
 			}
 		}
 	}
+
 
 	// Add a new task
 
@@ -119,10 +125,10 @@
 			display: none;
 		}
 		label {
-			background-color: #B0BEC5;
+			background-color: #ddd;
 		}
 		input[type=checkbox]:checked + label {
-			background-color: #4CAF50;
+			background-color: $accent-color;
 			color: white;
 		}
 
@@ -140,6 +146,18 @@
 		}
 	}
 
+	// instructions
+
+	.instructions {
+		position: fixed;
+		bottom: 10px;
+		left: 20px;
+		#keyboard_shortcuts {
+			opacity: 0.5;
+			font-style: italic;
+		}
+	}
+
 	// Task archive
 
 	#task_archive {
@@ -148,13 +166,15 @@
 			background-color: transparent;
 			box-shadow: none;
 			a {
-				color: #333333;
-				opacity: 0.8;
 				.glyphicon {
 					margin: 4px 0 0 10px;
 				}
 			}
 			.panel-heading {
+				a {
+					color: black;
+					opacity: 0.5;
+				}
 				background-color: transparent;
 				a:focus {
 					text-decoration: none;

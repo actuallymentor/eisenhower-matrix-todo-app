@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/api/' => 'api#read'
   
   # App mapping
-  get '/' => redirect('/app/')
+  get '/' => 'pages#index'
   get '/app/' => 'interface#index'
   post '/app/create/' => 'interface#create', as: :tasks
   post '/app/done/' => 'interface#done'
