@@ -1,104 +1,171 @@
-// Import bootstrap before custom definitions
+	// General definitions
 
-@import "bootstrap";
-
-// General definitions
-
-.pull-right {
-	float: right!important;
-}
-body {
-	background-color: #ECEFF1;
-}
-.btn-primary {
-	background-color: #2196F3;
-}
-.btn, .btn-sm {
-	border: none;
-	border-radius: 0;
-}
-
-// Header
-
-.header {
-	h1 {
-		margin: 10px 0 20px 0;
+	.pull-right {
+		float: right!important;
 	}
-}
+	body {
+		background-color: #ECEFF1;
+	}
+	.btn-primary {
+		background-color: #2196F3;
+	}
+	.btn, .btn-sm {
+		border: none;
+		border-radius: 0;
+		box-shadow: none!important;
+	}
 
-// Task section
+	// Header
 
-.tasks {
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 50px 0;
-		box-shadow: 0 5px 10px #CFD8DC;
-
-		li {
-			background-color: white;
-			padding: 10px 20px;
-			border: solid 1px #CFD8DC;
-			border-bottom: none;
-
-			a.btn {
-				padding: 2px 5px;
-			}
-
+	.header {
+		h1 {
+			margin: 10px 0 20px 0;
 		}
 	}
-}
 
-// Add a new task
+	// Task section
 
-.container_circle {
-	position: fixed;
-	right: 6em;
-	bottom: 6em;
-	z-index: 999999;
+	.tasks {
+		.all_done {
+			display: none;
+			&:first-child:nth-last-child(1) {
+				display: block;
+			}
+		}
+		p {
+			opacity: 0.8;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 50px 0;
+			box-shadow: 0 5px 10px #CFD8DC;
+			background-color: #ddd;
+			padding: 10px;
 
-	.circle {
-		width:60px;
-		height:60px;
-		position: absolute;
+			li {
+				background-color: white;
+				padding: 10px 20px;
+				border: solid 1px #CFD8DC;
+				border-bottom: none;
 
-		border-radius:50%;
-		-webkit-transition:all 0.2s linear;
-		-moz-transition:all 0.2s linear;
-		-ms-transition:all 0.2s linear;
-		transition:all 0.2s linear;
-		box-shadow: 1px 1px 3px #7D7D7D;
-		background-color: $accent-color;
+				&.all_done {
+					background: none;
+					border: none;
+					opacity: 0.8;
+					.glyphicon {
+						padding-right: 10px;
+						top: 2px;
+					}
+				}
 
-		.glyphicon {
-			@include dead-center();
+				a.btn {
+					padding: 2px 5px;
+					&:hover {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
+
+	// Add a new task
+
+	.container_circle {
+		position: fixed;
+		right: 6em;
+		bottom: 6em;
+		z-index: 999999;
+
+		.circle {
+			width:60px;
+			height:60px;
+			position: absolute;
+
+			border-radius:50%;
+			-webkit-transition:all 0.2s linear;
+			-moz-transition:all 0.2s linear;
+			-ms-transition:all 0.2s linear;
+			transition:all 0.2s linear;
+			box-shadow: 1px 1px 3px #7D7D7D;
+			background-color: $accent-color;
+
+			.glyphicon {
+				@include dead-center();
+				color: white;
+			}
+		}
+		.circle:hover {
+			box-shadow: 1px 1px 30px black;
+		}
+
+		.circle.base {
+			z-index: 1;
+		}
+	}
+
+	// New task modal
+
+	.newtask.modal-dialog .modal-content {
+
+		margin-top: 20%;
+		border: none;
+		border-radius: 0;
+		
+		.btn-sm {
+			margin: 5px 10px;
+		}
+		input[type=checkbox] {
+			display: none;
+		}
+		label {
+			background-color: #B0BEC5;
+		}
+		input[type=checkbox]:checked + label {
+			background-color: #4CAF50;
 			color: white;
 		}
-	}
-	.circle:hover {
-		box-shadow: 1px 1px 30px black;
+
+		label.btn-sm, input.btn-sm {
+			margin: 0;
+		}
+
+		#task_name {
+			width: 60%;
+			padding: 15px;
+			border: none;
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 
-	.circle.base {
-		z-index: 1;
-	}
-}
+	// Task archive
 
-// New task modal
-
-.newtask.modal-dialog .modal-content {
-	margin-top: 50%;
-	.btn-sm {
-		margin: 5px 10px;
+	#task_archive {
+		.panel-default {
+			border: none;
+			background-color: transparent;
+			box-shadow: none;
+			a {
+				color: #333333;
+				opacity: 0.8;
+				.glyphicon {
+					margin: 4px 0 0 10px;
+				}
+			}
+			.panel-heading {
+				background-color: transparent;
+				a:focus {
+					text-decoration: none;
+				}
+				a:hover, a[aria-expanded="true"] {
+					text-decoration: none;
+					color: $accent-color;
+					.glyphicon {
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
 	}
-	input[type=checkbox] {
-		display: none;
-	}
-	label {
-		background-color: #B0BEC5;
-	}
-	input[type=checkbox]:checked + label {
-		background-color: #4CAF50;
-		color: white;
-	}
-}

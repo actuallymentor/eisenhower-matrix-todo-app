@@ -3,7 +3,8 @@ class InterfaceController < ApplicationController
 		params.require(:task).permit(:name, :important, :urgent, :done, :owner)
 	end
 	def create
-		@task = Task.new(task_params, :done => 'false', :owner => 'Mentor')
+		@hascontent = params.has_key?(:name)
+		@task = Task.new(task_params, :done => 'false')
 		if @task.save
 			redirect_to '/app/'
 		end
@@ -21,6 +22,8 @@ class InterfaceController < ApplicationController
 	end
 	def index
 
+		redirect_to '/auth/login' if !user_signed_in?
+
 		# initialise empty task for the form #
 
 		@task = Task.new
@@ -29,10 +32,12 @@ class InterfaceController < ApplicationController
 		# Construct task queries #
 		##########################
 
+		@owner = current_user.id if user_signed_in?
+
 		# Important & Urgent #
 		
 		@important_urgent_query = {
-			# owner: 'Mentor',
+			owner: @owner,
 			important: '1',
 			urgent: '1',
 			done: '0'
@@ -41,7 +46,7 @@ class InterfaceController < ApplicationController
 		# Important & NOT urgent #
 
 		@important_not_urgent_query = {
-			# owner: 'Mentor',
+			owner: @owner,
 			important: '1',
 			urgent: '0',
 			done: '0'
@@ -50,7 +55,7 @@ class InterfaceController < ApplicationController
 		# NOT important & urgent #
 
 		@not_important_urgent_query = {
-			# owner: 'Mentor',
+			owner: @owner,
 			important: '0',
 			urgent: '1',
 			done: '0'
@@ -59,13 +64,14 @@ class InterfaceController < ApplicationController
 		# NOT important & NOT urgent #
 
 		@not_important_not_urgent_query = {
-			# owner: 'Mentor',
+			owner: @owner,
 			important: '0',
 			urgent: '0',
 			done: '0'
 		}
 
 		@tasks_archive_query = {
+			owner: @owner,
 			done: '1'
 		}
 		@tasks_archive = Task.where( @tasks_archive_query )

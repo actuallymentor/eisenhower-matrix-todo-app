@@ -30,6 +30,10 @@
  	border: 0;
  	border-radius: 0;
 
+ 	a:hover {
+ 		color: $primary-light !important;
+ 	}
+
  	ul li a, a {
  		color: white;
  	}
@@ -37,6 +41,15 @@
  	ul.nav .active a {
  		background-color: $primary-dark;
  		color: white;
+ 	}
+
+ 	.navbar-toggle {
+ 		span.icon-bar {
+ 			background-color: white;
+ 		}
+ 		&:hover, &:focus {
+ 			background-color: $accent-color;
+ 		}
  	}
 
  }

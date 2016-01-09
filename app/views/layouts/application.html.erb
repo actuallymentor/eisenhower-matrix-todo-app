@@ -28,19 +28,12 @@
 					<li class="active"><a href="#">Home </a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-
 					<% if user_signed_in? %>
-					<li>Welcome back <%= current_user %></li>
-					<% end %>
-
-					<li>
-
-					<% if user_signed_in? %>
-					<a href="/auth/logout">Log out</a></li>
+					<li><a href="/auth/logout">Log out <%= current_user.email %></a></li>
 					<% end %>
 
 					<% if !user_signed_in? %>
-					<a href="/auth/login">Log in</a></li>
+					<li><a href="/auth/login">Log in</a></li>
 					<% end %>
 				</ul>
 			</div><!-- /.navbar-collapse -->

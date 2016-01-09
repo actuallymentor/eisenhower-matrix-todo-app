@@ -1,4 +1,8 @@
 $ ->
+
+	# init tooltip functionality #
+	$('[data-toggle="tooltip"]').tooltip()
+
 	#############################
 	# Catch the clicking of 'done'
 	#############################
@@ -80,22 +84,27 @@ $ ->
 	# Keyboard shortcuts
 	#############################
 
-	$('body.app_index').on 'keypress', (e) ->
-		console.log(e.which)
-		if e.which is 116
+	$('body.app_index').on 'keydown', (e) ->
+		important = $('.important_checkbox').prop('checked')
+		urgent = $('.urgent_checkbox').prop('checked')
+		ctrl_button = e.ctrlKey or e.metaKey
+		console.log(e.ctrlKey)
+		if e.which is 84
 			$('#task_modal').modal('show')
-
-
-
-
-
-
-
-
-
-
-
-
+		if e.which is 73 and ctrl_button
+			if important is false
+				$('.important_checkbox').prop('checked', true)
+			if important is true
+				$('.important_checkbox').prop('checked', false)
+		if e.which is 85 and ctrl_button
+			if urgent is false
+				$('.urgent_checkbox').prop('checked', true)
+			if urgent is true
+				$('.urgent_checkbox').prop('checked', false)
+	
+	# Focus on text input
+	$('#task_modal').on 'shown.bs.modal', (e) ->
+		$('#task_name').focus()
 
 
 

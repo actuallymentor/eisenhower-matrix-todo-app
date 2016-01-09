@@ -1,7 +1,6 @@
 <body class="app_index">
 	<div class="container header">
-		<h1>Task Overview</h1>
-		
+
 	</div>
 
 	<hr>
@@ -17,7 +16,10 @@ This section displays undone tasks from the database
 <div class="container" id="active_tasks">
 	<div class="row">
 		<div class="col-md-6 tasks important urgent">
-			<p>Important & Urgent</p>
+			<p>
+				Do this now
+				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important & urgent tasks. Do these as soon as possible."></span>
+			</p>
 			<ul>
 				<% @important_urgent.each do |task| %>
 				<li class="task" id="<%= task.id %>">
@@ -25,10 +27,14 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
+					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
 			</ul>
 		</div>
 		<div class="col-md-6 tasks important noturgent">
-			<p>Important & <strike>Urgent</strike></p>
+			<p>
+				Decide when to do it
+				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important but not urgent tasks. Plan these in."></span>
+			</p>
 			<ul>
 				<% @important_not_urgent.each do |task| %>
 				<li class="task" id="<%= task.id %>">
@@ -36,12 +42,16 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
+					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
 			</ul>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6 tasks notimportant urgent">
-			<p><strike>Important</strike> & Urgent</p>
+			<p>
+				Delegate it
+				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Not important but urgent tasks. These are not worth your time."></span>
+			</p>
 			<ul>
 				<% @not_important_urgent.each do |task| %>
 				<li class="task" id="<%= task.id %>">
@@ -49,10 +59,14 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
+					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
 			</ul>
 		</div>
 		<div class="col-md-6 tasks notimportant noturgent">
-			<p><strike>Important & Urgent</strike></p>
+			<p>
+			Delete these
+			<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Not important and not urgent. Ignore these tasks."></span>
+			</p>
 			<ul>
 				<% @not_important_not_urgent.each do |task| %>
 				<li class="task" id="<%= task.id %>">
@@ -60,6 +74,7 @@ This section displays undone tasks from the database
 					<a class="active btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">done</a>
 				</li>
 				<% end %>
+					<li class="all_done"><span class="glyphicon glyphicon-ok-circle"></span>Taken care of, well done.</li>
 			</ul>
 		</div>
 	</div>
@@ -72,20 +87,30 @@ This section displays done tasks from the database
 #################################################
 
 -->
-
-<div class="container">
-	<div class="row archive">
-		<div class="col-md-12 tasks" id="done_tasks">
-			<br>
-			<p>Done tasks</p>
-			<ul>
-				<% @tasks_archive.each do |task| %>
-				<li class="task" id="<%= task.id %>">
-					<%= task.name %>
-					<a class="done btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">delete</a>
-				</li>
-				<% end %>
-			</ul>
+<div class="container archive">
+	<div class="row">
+		<div class="panel-group" id="task_archive" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<a  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						Task Archive  <span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body">
+						<div class="col-md-12 tasks" id="done_tasks">
+							<ul>
+								<% @tasks_archive.each do |task| %>
+								<li class="task" id="<%= task.id %>">
+									<%= task.name %>
+									<a class="done btn btn-secondary pull-right btn-sm" href="/app/done/<%= task.id %>">delete</a>
+								</li>
+								<% end %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -114,7 +139,7 @@ This is the 'new task' modal
 -->
 
 <div class="modal fade" id="task_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="newtask modal-dialog" role="document">
+	<div class="newtask modal-dialog" role="document">
 		<div class="modal-content">
 			<%= form_for @task do |f| %> 
 			<%= f.text_field :name, :placeholder => 'Task name' %>
@@ -126,7 +151,7 @@ This is the 'new task' modal
 			<%= f.label :urgent, 'Urgent', :class => 'btn-sm btn-secondary' %>
 
 			<%= f.hidden_field :done, :value => '0' %>
-			<%= f.hidden_field :owner, :value => 'Mentor' %>
+			<%= f.hidden_field :owner, :value => current_user.id %>
 			<%= f.submit 'Create task', :class => 'btn-sm btn-primary', :id => 'createtask' %>
 			<% end %>
 		</div>
