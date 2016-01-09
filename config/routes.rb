@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   
   # App mapping
   get '/' => 'pages#index'
+  get '/about/' => 'pages#about'
   get '/app/' => 'interface#index'
   post '/app/create/' => 'interface#create', as: :tasks
   post '/app/done/' => 'interface#done'
