@@ -7,6 +7,7 @@ source 'https://rails-assets.org' do
 end
 gem 'devise'
 gem "browser"
+gem 'mysql2'
 
 # END CUSTOM #
 
