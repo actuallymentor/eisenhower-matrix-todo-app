@@ -8,6 +8,7 @@ end
 gem 'devise'
 gem "browser"
 gem 'mysql2'
+gem 'capistrano'
 
 # END CUSTOM #
 
