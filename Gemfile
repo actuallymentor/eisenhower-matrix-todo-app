@@ -7,8 +7,18 @@ source 'https://rails-assets.org' do
 end
 gem 'devise'
 gem "browser"
-#gem "mysql2"
-gem 'capistrano'
+group :production do
+  gem 'mysql2'
+end
+gem 'capistrano', '~> 3.1.0'
+
+# rails specific capistrano funcitons
+gem 'capistrano-rails', '~> 1.1.0'
+
+# integrate bundler with capistrano
+gem 'capistrano-bundler'
+
+gem 'capistrano-rvm'
 
 # END CUSTOM #
 
