@@ -7,7 +7,7 @@ source 'https://rails-assets.org' do
 end
 gem 'devise'
 gem "browser"
-gem 'mysql2'
+#gem "mysql2"
 gem 'capistrano'
 
 # END CUSTOM #

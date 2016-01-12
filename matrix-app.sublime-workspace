@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"not_",
+				"not_important_not_urgent"
+			],
+			[
+				"cr",
+				"ctrlKey"
+			],
+			[
+				"ctr",
+				"ctrlKey"
+			],
+			[
+				"primr",
+				"primary-color"
+			],
+			[
 				"latest",
 				"latest_task"
 			],
@@ -95,6 +111,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "config/initializers/devise.rb",
+			"settings":
+			{
+				"buffer_size": 13086,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1735,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -145,10 +177,44 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Mentor/Dev/Ror/matrix-app"
+		"/Users/Mentor/Dev/Ror/matrix-app",
+		"/Users/Mentor/Dev/Ror/matrix-app/app",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/layouts",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/initializers",
+		"/Users/Mentor/Dev/Ror/matrix-app/vendor/assets"
 	],
 	"file_history":
 	[
+		"/Users/Mentor/Dev/Ror/matrix-app/config/database.yml",
+		"/Users/Mentor/Dev/rails setup instructions.sh",
+		"/Users/Mentor/Dev/rails-server-setup.sh",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/pages.scss",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/layouts/application.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/about.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/routes.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/javascripts/interface.coffee",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/interface/index.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/interface_controller.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/index.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/interface.scss",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/pages_controller.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/registrations/new.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/application.scss",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/variables.scss",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/login.scss",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/javascripts/application.js",
+		"/Users/Mentor/Dev/Ror/matrix-app/Gemfile",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/passwords/new.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/sessions/new.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/users/sessions_controller.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/application.css",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/users/sessions/new.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/environments/development.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/api_controller.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/db/migrate/20160105141722_create_tasks.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/application_controller.rb",
 		"/Users/Mentor/Dev/Ror/Playground/app/assets/stylesheets/interface.scss",
 		"/Users/Mentor/Dev/Ror/Playground/app/views/interface/index.html.erb",
 		"/Users/Mentor/Dev/Ror/Playground/app/assets/javascripts/application.js",
@@ -248,39 +314,11 @@
 		"/C/Users/Mentor/Desktop/desktop.ini",
 		"/C/Users/Mentor/AppData/Local/Temp/scp42533/etc/nginx/sites-available/default",
 		"/C/Users/Mentor/AppData/Local/Temp/scp42512/etc/nginx/conf.d/skillcollector.conf",
-		"/C/Users/Mentor/Downloads/website",
-		"/C/Users/Mentor/Desktop/servercheck.sh",
-		"/C/Users/Mentor/AppData/Local/Temp/scp37283/etc/nginx/mod_pagespeed.conf",
-		"/C/Users/Mentor/AppData/Local/Temp/scp39595/etc/nginx/conf.d/skillcollector.conf",
-		"/C/Users/Mentor/AppData/Local/Temp/scp31720/etc/nginx/sites-available/default",
-		"/C/Users/Mentor/AppData/Local/Temp/scp38831/etc/nginx/nginx.conf",
-		"/C/Users/Mentor/AppData/Local/Temp/scp35842/root/servercheck.sh",
-		"/C/Users/Mentor/AppData/Local/Temp/scp33667/etc/nginx/hhvm-with-fallback.conf",
-		"/C/Users/Mentor/AppData/Local/Temp/scp33171/etc/nginx/hhvm-with-fallback.conf",
-		"/C/Users/Mentor/AppData/Local/Evernote/Evernote/Databases/Attachments/hhvm-with-fallback[1].conf",
-		"/C/Users/Mentor/Downloads/phpinfo.php",
-		"/C/Users/Mentor/Desktop/hhvm-with-fallback.conf",
-		"/C/Users/Mentor/AppData/Local/Temp/scp31985/etc/nginx/conf.d/hilmano.conf",
-		"/C/Users/Mentor/AppData/Local/Evernote/Evernote/Databases/Attachments/website",
-		"/C/Users/Mentor/AppData/Local/Temp/scp17431/var/log/nginx/error.log",
-		"/C/Users/Mentor/AppData/Local/Temp/scp17066/var/log/syslog",
-		"/C/Users/Mentor/AppData/Local/Temp/scp17264/var/log/faillog",
-		"/C/Users/Mentor/AppData/Local/Temp/scp17305/var/log/php5-fpm.log",
-		"/C/Users/Mentor/AppData/Local/Temp/scp10879/var/log/nginx/access.log",
-		"/C/Users/Mentor/AppData/Local/Temp/scp07471/etc/nginx/nginx.conf",
-		"/C/Users/Mentor/AppData/Local/EpicGamesLauncher/Saved/Logs/EpicGamesLauncher.log",
-		"/E/Onedrive/Backups/Crypto/mentorkey",
-		"/E/Onedrive/Backups/Crypto/pubdig",
-		"/C/Users/Mentor/AppData/Local/Temp/scp46874/etc/nginx/sites-available/default",
-		"/C/Users/Mentor/AppData/Local/Temp/scp13626/etc/nginx/sites-available/default",
-		"/C/Users/Mentor/AppData/Local/Temp/scp12776/var/www/html/wp-blog-header.php",
-		"/C/Users/Mentor/AppData/Local/Temp/scp12755/var/www/html/index.php",
-		"/C/Users/Mentor/AppData/Local/Temp/scp10866/var/log/nginx/error.log",
-		"/C/Users/Mentor/AppData/Local/Temp/scp58331/var/www/html/wp-config.php"
+		"/C/Users/Mentor/Downloads/website"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -294,6 +332,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$ ",
+			".newtask.modal-dialog",
+			"3F51B5",
+			"password_signup",
+			"login_wrap",
+			"loginform",
+			"}",
 			"bundle",
 			"<li>",
 			"col-md-6",
@@ -353,6 +398,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"other_actions",
+			"session_wrap",
+			"sessionform",
 			"<li class=\"task\">",
 			"col-md-6 tasks",
 			"secondary pull-right",
@@ -389,14 +438,73 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "config/initializers/devise.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -441,7 +549,7 @@
 	"project": "matrix-app.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -479,7 +587,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 215.0,
+	"side_bar_width": 227.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
