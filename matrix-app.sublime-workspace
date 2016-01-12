@@ -123,7 +123,7 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1735,
+				"buffer_size": 1907,
 				"line_ending": "Unix"
 			}
 		}
@@ -179,14 +179,22 @@
 	[
 		"/Users/Mentor/Dev/Ror/matrix-app",
 		"/Users/Mentor/Dev/Ror/matrix-app/app",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/images",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/layouts",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages",
-		"/Users/Mentor/Dev/Ror/matrix-app/config/initializers",
-		"/Users/Mentor/Dev/Ror/matrix-app/vendor/assets"
+		"/Users/Mentor/Dev/Ror/matrix-app/config",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/deploy",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/environments"
 	],
 	"file_history":
 	[
+		"/Users/Mentor/Dev/Ror/matrix-app/Capfile",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/deploy.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/deploy/production.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/environments/production.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/index.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/database.yml",
 		"/Users/Mentor/Dev/rails setup instructions.sh",
 		"/Users/Mentor/Dev/rails-server-setup.sh",
@@ -197,7 +205,6 @@
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/javascripts/interface.coffee",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/interface/index.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/interface_controller.rb",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/index.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/interface.scss",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/pages_controller.rb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/registrations/new.html.erb",
@@ -310,11 +317,7 @@
 		"/C/Users/Mentor/Servers/SMU/Vagrantfile",
 		"/C/Users/Mentor/AppData/Local/Temp/7zO55D4.tmp/README.md",
 		"/C/Users/Mentor/Servers/SMU/supermegaukulele.sh",
-		"/C/Users/Public/Desktop/desktop.ini",
-		"/C/Users/Mentor/Desktop/desktop.ini",
-		"/C/Users/Mentor/AppData/Local/Temp/scp42533/etc/nginx/sites-available/default",
-		"/C/Users/Mentor/AppData/Local/Temp/scp42512/etc/nginx/conf.d/skillcollector.conf",
-		"/C/Users/Mentor/Downloads/website"
+		"/C/Users/Public/Desktop/desktop.ini"
 	],
 	"find":
 	{
@@ -332,6 +335,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tmp",
 			"$ ",
 			".newtask.modal-dialog",
 			"3F51B5",
@@ -477,15 +481,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1735,
+						"buffer_size": 1907,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								246,
-								246
+								233,
+								233
 							]
 						],
 						"settings":
@@ -558,6 +562,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"config/deploy.rb"
+			]
 		],
 		"width": 0.0
 	},
