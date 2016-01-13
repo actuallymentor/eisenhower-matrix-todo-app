@@ -1,24 +1,52 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.demo {
-	margin-top: 20px; 
-	#demo_gif {
-		padding: 0;
-		box-shadow: 1px 1px 10px black;
-		margin-top: 20px;
-		height: auto;
-	}
-}
 
-#credits {
+.frontpage {
 	margin-top: 50px;
-	opacity: 0.8;
-	#signature {
-		font-style: italic;
-		margin-top: 20px;
+	.demo {
+		margin-top: 40px; 
+		#demo_gif {
+			padding: 0;
+			box-shadow: 1px 1px 10px black;
+			margin-top: 20px;
+			height: auto;
+		}
 	}
-}
-.about {
-	margin-top: 50px;
+
+	#credits {
+		margin-top: 50px;
+		opacity: 0.8;
+		#signature {
+			font-style: italic;
+			margin-top: 20px;
+		}
+	}
+	.about {
+		margin-top: 50px;
+	}
+	.frontcard {
+		margin: 0 0 50px 0;
+		box-shadow: 0 5px 10px #CFD8DC;
+		background-color: #ddd;
+		padding: 20px;
+		.glyphicon {
+			font-size: 50px;
+			opacity: 0.5;
+			margin-bottom: 20px;
+			padding: 0 10px;
+		}
+		&.important {
+			.glyphicon-exclamation-sign {
+				opacity: 0.6;
+				color: $accent-color;
+			}
+		}
+		&.urgent {
+			.glyphicon-time {
+				opacity: 0.6;
+				color: $accent-color;
+			}
+		}
+	}
 }
