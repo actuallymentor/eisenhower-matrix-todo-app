@@ -112,18 +112,34 @@
 	"buffers":
 	[
 		{
-			"file": "config/initializers/devise.rb",
+			"file": "app/views/pages/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 13086,
+				"buffer_size": 2097,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Gemfile",
+			"file": "app/views/interface/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1907,
+				"buffer_size": 6315,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/pages.scss",
+			"settings":
+			{
+				"buffer_size": 902,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/interface.scss",
+			"settings":
+			{
+				"buffer_size": 3312,
 				"line_ending": "Unix"
 			}
 		}
@@ -180,39 +196,41 @@
 		"/Users/Mentor/Dev/Ror/matrix-app",
 		"/Users/Mentor/Dev/Ror/matrix-app/app",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/images",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/interface",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/layouts",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages",
-		"/Users/Mentor/Dev/Ror/matrix-app/config",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/deploy",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/environments"
 	],
 	"file_history":
 	[
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/interface/index.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/environments/production.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/interface_controller.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/config/initializers/devise.rb",
+		"/Users/Mentor/Dev/Ror/matrix-app/Gemfile",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/variables.scss",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/index.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/views/layouts/application.html.erb",
+		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/pages.scss",
 		"/Users/Mentor/Dev/Ror/matrix-app/Capfile",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/deploy.rb",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/deploy/production.rb",
-		"/Users/Mentor/Dev/Ror/matrix-app/config/environments/production.rb",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/index.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/database.yml",
 		"/Users/Mentor/Dev/rails setup instructions.sh",
 		"/Users/Mentor/Dev/rails-server-setup.sh",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/pages.scss",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/views/layouts/application.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/pages/about.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/config/routes.rb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/javascripts/interface.coffee",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/views/interface/index.html.erb",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/interface_controller.rb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/interface.scss",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/pages_controller.rb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/registrations/new.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/application.scss",
-		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/variables.scss",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/stylesheets/login.scss",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/assets/javascripts/application.js",
-		"/Users/Mentor/Dev/Ror/matrix-app/Gemfile",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/passwords/new.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/views/devise/sessions/new.html.erb",
 		"/Users/Mentor/Dev/Ror/matrix-app/app/controllers/users/sessions_controller.rb",
@@ -316,8 +334,7 @@
 		"/E/Onedrive/Dev/vagrant-smus/setup.sh",
 		"/C/Users/Mentor/Servers/SMU/Vagrantfile",
 		"/C/Users/Mentor/AppData/Local/Temp/7zO55D4.tmp/README.md",
-		"/C/Users/Mentor/Servers/SMU/supermegaukulele.sh",
-		"/C/Users/Public/Desktop/desktop.ini"
+		"/C/Users/Mentor/Servers/SMU/supermegaukulele.sh"
 	],
 	"find":
 	{
@@ -325,7 +342,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -335,6 +352,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"title=\"Important",
 			"tmp",
 			"$ ",
 			".newtask.modal-dialog",
@@ -402,6 +420,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"title=\"Important task",
 			"",
 			"other_actions",
 			"session_wrap",
@@ -442,62 +461,120 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "config/initializers/devise.rb",
+					"file": "app/views/pages/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13086,
+						"buffer_size": 2097,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								534,
-								534
+								12,
+								12
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/interface/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3331,
+								3331
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 939.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Gemfile",
+					"buffer": 2,
+					"file": "app/assets/stylesheets/pages.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1907,
+						"buffer_size": 902,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								233,
-								233
+								0,
+								902
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/stylesheets/interface.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2602,
+								2602
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2075.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
