@@ -164,6 +164,19 @@
 				outline: none;
 			}
 		}
+		@media screen and (max-width: 580px) {
+			#task_name {
+				width: 100%;
+			}
+			#new_task {
+				padding: 10px;
+				text-align: center;
+			}
+			.btn-sm {
+				padding: 10px 20px;
+				font-size: 15px;
+			}
+		}
 	}
 
 	// instructions
