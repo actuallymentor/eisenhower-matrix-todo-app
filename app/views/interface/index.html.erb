@@ -18,7 +18,8 @@ This section displays undone tasks from the database
 		<div class="col-md-6 tasks important urgent">
 			<p>
 				Do this now
-				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important & urgent tasks. Do these as soon as possible."></span>
+				<span class="glyphicon glyphicon-time pull-right" data-toggle="tooltip" data-placement="top" title="Urgent task"></span>
+				<span class="glyphicon glyphicon-exclamation-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important task"></span>
 			</p>
 			<ul>
 				<% @important_urgent.each do |task| %>
@@ -33,7 +34,8 @@ This section displays undone tasks from the database
 		<div class="col-md-6 tasks important noturgent">
 			<p>
 				Decide when to do it
-				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important but not urgent tasks. Plan these in."></span>
+				<span class="glyphicon glyphicon-time pull-right" data-toggle="tooltip" data-placement="top" title="Urgent task"></span>
+				<span class="glyphicon glyphicon-exclamation-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important task"></span>
 			</p>
 			<ul>
 				<% @important_not_urgent.each do |task| %>
@@ -50,7 +52,8 @@ This section displays undone tasks from the database
 		<div class="col-md-6 tasks notimportant urgent">
 			<p>
 				Delegate it if possible
-				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Not important but urgent tasks. These are not worth your time."></span>
+				<span class="glyphicon glyphicon-time pull-right" data-toggle="tooltip" data-placement="top" title="Urgent task"></span>
+				<span class="glyphicon glyphicon-exclamation-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important task"></span>
 			</p>
 			<ul>
 				<% @not_important_urgent.each do |task| %>
@@ -65,7 +68,8 @@ This section displays undone tasks from the database
 		<div class="col-md-6 tasks notimportant noturgent">
 			<p>
 				Delete or delegate these
-				<span type="button" class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Not important and not urgent. Ignore these tasks."></span>
+				<span class="glyphicon glyphicon-time pull-right" data-toggle="tooltip" data-placement="top" title="Urgent task"></span>
+				<span class="glyphicon glyphicon-exclamation-sign pull-right" data-toggle="tooltip" data-placement="top" title="Important task"></span>
 			</p>
 			<ul>
 				<% @not_important_not_urgent.each do |task| %>

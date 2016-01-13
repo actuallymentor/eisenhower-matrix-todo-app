@@ -32,6 +32,26 @@
 				display: block;
 			}
 		}
+		.glyphicon {
+			opacity: 0.8;
+			padding: 0 5px;
+		}
+		&.important {
+			.glyphicon-exclamation-sign {
+				opacity: 1;
+				color: $accent-color;
+			}
+		}
+		&.urgent {
+			.glyphicon-time {
+				opacity: 1;
+				color: $accent-color;
+			}
+		}
+		.tooltip {
+			max-width: 200px;
+			width: 100px;
+		}
 		p {
 			opacity: 0.8;
 		}
