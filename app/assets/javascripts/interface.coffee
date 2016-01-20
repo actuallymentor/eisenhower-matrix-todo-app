@@ -92,11 +92,13 @@ $ ->
 		if e.which is 84
 			$('#task_modal').modal('show')
 		if e.which is 73 and ctrl_button
+			e.preventDefault()
 			if important is false
 				$('.important_checkbox').prop('checked', true)
 			if important is true
 				$('.important_checkbox').prop('checked', false)
 		if e.which is 85 and ctrl_button
+			e.preventDefault()
 			if urgent is false
 				$('.urgent_checkbox').prop('checked', true)
 			if urgent is true
